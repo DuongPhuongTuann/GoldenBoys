@@ -60,6 +60,7 @@ public class Update {
                         if (sub_inf[0].equals(d)) {
                             inf.set(i, problemId + "," + category + "," + short_description + "," + link + "," + author + "," + mark_weight);
                             write_to_file("C:\\Assignment-Pro-2\\QBs.dat", inf);
+                            System.out.println("Update successfully");
                         }
                     }
                 }

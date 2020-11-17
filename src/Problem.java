@@ -41,9 +41,9 @@ public class Problem {
 
          FileWriter fileWritter = new FileWriter(f1.getName(),true);
          BufferedWriter bw = new BufferedWriter(fileWritter);
-         bw.write("\n");
+         
 
-         bw.write(problemId+"|"+category+"|"+short_description+"|"+link+"|"+author+"|"+mark_weight);
+         bw.write(problemId+","+category+","+short_description+","+link+","+author+","+mark_weight);
          
          bw.close();
          System.out.println("Add a new problem to the Question Bank Successfully\n");

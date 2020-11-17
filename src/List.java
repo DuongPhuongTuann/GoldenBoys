@@ -13,6 +13,7 @@ public class List {
     	  String content = "";
     	  while(sc.hasNextLine()) {
     		  content += sc.nextLine()+"\r\n";
+                  
     	  }
   	      System.out.println(content);
               

@@ -75,15 +75,15 @@ public class LoginSystem {
             System.out.println(found);
             while (flag == true) {
 //                
-System.out.println("============================================");
+                System.out.println("============================================");
                 System.out.println("1-View your Information");
                 System.out.println("2-Change your password");
                 System.out.println("3-Change your information");
                 System.out.println("4-Add a new problem to the Question Bank (QB)");
                 System.out.println("5-List all problem");
-                System.out.println("6-Generate a new Contest ");
-                System.out.println("7-Update full information for a particular problem by Problem ID");
-               
+                System.out.println("6-Update full information for a particular problem by Problem ID");
+                System.out.println("7-Generate a new Contest ");
+                System.out.println("8-Show the contest's score ");
                 System.out.println("0-Exit");
                 System.out.println("============================================");
                 int choose = sc1.nextInt();
@@ -105,15 +105,19 @@ System.out.println("============================================");
                         List b = new List();
                         b.Listt();
                         break;
-                    case 6:
+                    case 7:
                         Contest e = new Contest();
                         e.Listttt();
                         break;
-                    case 7:
+                    case 6:
                         Update d = new Update();
                         d.replace();
                         break;
-                   
+                    case 8:
+                        Score f = new Score();
+                        f.sco();
+                        break;
+
                     case 0:
                         return;
                 }

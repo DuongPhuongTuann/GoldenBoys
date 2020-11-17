@@ -9,6 +9,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
+import static javafx.beans.binding.Bindings.and;
 
 public class Contest {
 
@@ -18,19 +19,21 @@ public class Contest {
 
             File x = new File("C:\\Assignment-Pro-2\\QBz.txt");
             Scanner sc = new Scanner(x);
-            String content = "";
             Random rd = new Random();
+            String content = "ContestID:"+rd.nextInt(100000)+"\n";    
             ArrayList<String> users = storage("C:\\Assignment-Pro-2\\QBz.txt");
             ArrayList<String> id = new ArrayList();
+            users.add(0, content);
             
             String a="ContestID: "+rd.nextInt(10000);
             id.add(a);
             while (sc.hasNextLine()) {
                 content += sc.nextLine() + "\r\n";
+                
             }
-            write_to_file("C:\\Assignment-Pro-2\\Contest_TimeStamp.txt", id);
+        
             write_to_file("C:\\Assignment-Pro-2\\Contest_TimeStamp.txt", users);
-
+            
             sc.close();
         } catch (FileNotFoundException e) {
             System.out.println("Error");
